@@ -1,16 +1,34 @@
+# The Site Configuration
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+# The language of the webpage
 lang: en
+
+# Change to your timezone
 timezone: Africa/Tunis
+
+# jekyll-seo-tag settings
+# ↓ --------------------------
+
 title: Cyber Security By Sahnoun111
-tagline: Cyber Security Expert | Hacker at Heart | Passionate Learner | 🇹🇳  
+
+tagline: Cyber Security Expert | Hacker at Heart | Passionate Learner | 🇹🇳
+
 description: >-
   A deep dive into my journey through the world of cybersecurity, hacking, and digital defense. 
   From personal experiments in malware analysis, and log forensics, to professional insights into pentesting, vulnerability research, and AI security. 
   Expect a mix of hands-on labs, tool reviews, threat hunting techniques, and my reflections on the evolving cyber landscape.
+
 url: "https://sahnoun111.io"
+
 github:
-  username: sahnoun111 
+  username: sahnoun111
+
 X:
   username: Sahnounoussama5
+
 social:
   name: Cyber Security By Sahnoun111
   links:
@@ -18,3 +36,120 @@ social:
     - https://github.com/sahnoun11
     - https://www.linkedin.com/in/oussama-sahnoun-0ba565131/
     - https://www.youtube.com/@Sahnoun111
+
+google_site_verification: # fill in to your verification string
+
+# ↑ --------------------------
+# The end of `jekyll-seo-tag` settings
+
+google_analytics:
+  id: G-DLRQB8D6RP
+
+# Prefer color scheme setting
+# theme_mode: # [light|dark]
+
+img_cdn:
+
+avatar: https://avatars.githubusercontent.com/u/34251619?s=400&u=4569cab1b4280e33839357542cf31b8bbc19b2fc&v=4
+
+social_preview_image:
+
+toc: true
+
+comments:
+  active: giscus
+  giscus:
+    repo: sahnoun111/sahnoun111.github.io
+    repo_id: R_kgDOLEBfGA
+    category: Comments
+    category_id: DIC_kwDOLEBfGM4CcX97
+    mapping:
+    input_position: bottom
+    lang: en
+    reactions_enabled: 1
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+pwa:
+  enabled: true
+
+paginate: 10
+
+baseurl: ""
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - rollup.config.js
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
